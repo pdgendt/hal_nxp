@@ -35,6 +35,8 @@ zephyr_library_sources_ifdef(CONFIG_UART_MCUX_LPUART	fsl_lpuart.c)
 zephyr_library_sources_ifdef(CONFIG_VIDEO_MCUX_CSI	fsl_csi.c)
 zephyr_library_sources_ifdef(CONFIG_WDT_MCUX_IMX_WDOG    fsl_wdog.c)
 zephyr_library_sources_ifdef(CONFIG_CAN_MCUX_FLEXCAN	fsl_flexcan.c)
+zephyr_library_sources_ifdef(CONFIG_COUNTER_MCUX_SNVS	fsl_snvs_hp.c)
+zephyr_library_sources_ifdef(CONFIG_COUNTER_MCUX_SNVS_SRTC	fsl_snvs_lp.c)
 
 if(CONFIG_FLASH_MCUX_FLEXSPI_XIP)
   zephyr_code_relocate(fsl_flexspi.c ${CONFIG_FLASH_MCUX_FLEXSPI_XIP_MEM}_TEXT)
